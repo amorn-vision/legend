@@ -1,7 +1,12 @@
-# ลิงก์สั้นหน้าลงทะเบียนแขก BNI Legend Chapter
+# ลิงก์สั้น BNI Legend Chapter
 
-เปิด [https://amorn-vision.github.io/legend/](https://amorn-vision.github.io/legend/) แล้วระบบจะพาไปหน้าลงทะเบียนสาธารณะทันที
+หน้าที่ใน repo นี้พาไปหน้าเว็บของ Google Apps Script ทันที (เปิดทับทั้งหน้า ไม่ได้ใส่ iframe) เพราะแอปสคริปต์เปิดในกรอบไม่ได้ดี
 
-ลิงก์นี้เป็นหน้าที่พาไปอย่างเดียว ไม่มีฟอร์มในตัว เพราะหน้าลงทะเบียนอยู่ที่ Google Apps Script ซึ่งเปิดในกรอบ (iframe) ไม่ได้ดี
+| ลิงก์สั้น | ปลายทาง |
+| --- | --- |
+| [https://amorn-vision.github.io/legend/](https://amorn-vision.github.io/legend/) | ลงทะเบียนแขก (PUBLIC) |
+| [https://amorn-vision.github.io/legend/buddy/](https://amorn-vision.github.io/legend/buddy/) | กระดาน Buddy Game สาธารณะ (PUBLIC `?page=buddy`) |
+| [https://amorn-vision.github.io/legend/admin/](https://amorn-vision.github.io/legend/admin/) | ระบบหลังบ้านสำหรับทีมงาน (STAFF `?page=admin`) |
+| [https://amorn-vision.github.io/legend/scan/](https://amorn-vision.github.io/legend/scan/) | หน้าสแกนเช็กอินสำหรับทีมงาน (STAFF `?page=scan`) |
 
-ถ้า Deploy สาธารณะของ Apps Script เปลี่ยนรหัสลิงก์ (`/macros/s/.../exec`) ให้แก้ปลายทางใน `index.html` แล้วอัปโหลดขึ้น repo นี้ใหม่ ถ้าเป็นไปได้ให้ใช้ deployment เดิม เพื่อไม่ต้องเปลี่ยนลิงก์สั้น
+ถ้า Deploy ของ Apps Script เปลี่ยนรหัสลิงก์ (`/macros/s/.../exec`) ให้แก้ปลายทางใน `index.html` ของหน้าเกี่ยวข้อง แล้วอัปโหลดขึ้น repo นี้ใหม่ ถ้าเป็นไปได้ให้ใช้ deployment เดิม เพื่อไม่ต้องเปลี่ยนลิงก์สั้น
