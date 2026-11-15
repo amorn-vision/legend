@@ -3,14 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Buddy Game — BNI Legend Chapter</title>
-  <meta name="description" content="กระดานคะแนน Buddy Game ของ BNI Legend Chapter">
-  <meta property="og:title" content="Buddy Game — BNI Legend Chapter">
-  <meta property="og:description" content="กระดานคะแนนสาธารณะ กลุ่ม Power Team และอันดับการชวนแขก">
-  <meta property="og:type" content="website">
+  <title>BNI Legend Buddy Game – จับคู่พลัง ชวนแขก</title>
+  <meta name="description" content="รางวัล 3,000 / 3,500 บาท ต่อทีม เฉพาะ 10 ทีมแรก · ดูคะแนนสด Buddy Game ของ BNI Legend Chapter">
+  <meta property="og:title" content="BNI Legend Buddy Game – จับคู่พลัง ชวนแขก">
+  <meta property="og:description" content="รางวัล 3,000 / 3,500 บาท ต่อทีม เฉพาะ 10 ทีมแรก · ดูคะแนนสด">
   <meta property="og:url" content="https://amorn-vision.github.io/legend/buddy/">
+  <meta property="og:type" content="website">
   <meta property="og:locale" content="th_TH">
-  <meta http-equiv="refresh" content="0;url=https://script.google.com/macros/s/AKfycbxgs91gTdaI8mZ4I3mlhRdcq26wDL8yKDmWDmWlIktCCeE8dXg3auxHAfdIhWmCezEB/exec?page=buddy&src=short">
+  <meta property="og:site_name" content="BNI Legend Chapter">
+  <meta property="og:image" content="https://amorn-vision.github.io/legend/buddy/og-cover.png">
+  <meta property="og:image:secure_url" content="https://amorn-vision.github.io/legend/buddy/og-cover.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="BNI Legend Buddy Game – รางวัล 3,000 / 3,500 บาท ต่อทีม เฉพาะ 10 ทีมแรก">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BNI Legend Buddy Game – จับคู่พลัง ชวนแขก">
+  <meta name="twitter:description" content="รางวัล 3,000 / 3,500 บาท ต่อทีม เฉพาะ 10 ทีมแรก · ดูคะแนนสด">
+  <meta name="twitter:image" content="https://amorn-vision.github.io/legend/buddy/og-cover.png">
+  <!-- Delay the fallback refresh so crawlers (LINE) can read the OG tags above.
+       Browsers still leave immediately via the script below. -->
+  <meta http-equiv="refresh" content="3;url=https://script.google.com/macros/s/AKfycbxgs91gTdaI8mZ4I3mlhRdcq26wDL8yKDmWDmWlIktCCeE8dXg3auxHAfdIhWmCezEB/exec?page=buddy&src=short">
   <script>
     (function () {
       var target = 'https://script.google.com/macros/s/AKfycbxgs91gTdaI8mZ4I3mlhRdcq26wDL8yKDmWDmWlIktCCeE8dXg3auxHAfdIhWmCezEB/exec?page=buddy&src=short';
@@ -19,7 +32,13 @@
       if (extra) dest = target + '&' + extra;
       dest += (location.hash || '');
       var meta = document.querySelector('meta[http-equiv="refresh"]');
-      if (meta) meta.setAttribute('content', '0;url=' + dest);
+      if (meta) meta.setAttribute('content', '3;url=' + dest);
+      var ua = navigator.userAgent || '';
+      // Skip JS redirect for known unfurlers so they keep this document's OG tags.
+      // Do not match "Line/" — that is the in-app browser used by real members.
+      if (/facebookexternalhit|line-poker|Linespider|Twitterbot|Slackbot|LinkedInBot|WhatsApp|Pinterest|SkypeUriPreview|Discordbot|TelegramBot|Googlebot|bingbot|Embedly|Iframely|vkShare|QQBot/i.test(ua)) {
+        return;
+      }
       location.replace(dest);
     })();
   </script>
