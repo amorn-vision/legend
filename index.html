@@ -23,11 +23,13 @@
   <meta name="twitter:image" content="https://amorn-vision.github.io/legend/og-cover.png?v=2">
   <!-- Delay the fallback refresh so crawlers (LINE) can read the OG tags above.
        Browsers still leave immediately via the script below. -->
-  <meta http-equiv="refresh" content="3;url=https://script.google.com/macros/s/AKfycbxgs91gTdaI8mZ4I3mlhRdcq26wDL8yKDmWDmWlIktCCeE8dXg3auxHAfdIhWmCezEB/exec">
+  <meta http-equiv="refresh" content="3;url=https://script.google.com/macros/s/AKfycbxgs91gTdaI8mZ4I3mlhRdcq26wDL8yKDmWDmWlIktCCeE8dXg3auxHAfdIhWmCezEB/exec?src=short">
   <script>
     (function () {
       var target = 'https://script.google.com/macros/s/AKfycbxgs91gTdaI8mZ4I3mlhRdcq26wDL8yKDmWDmWlIktCCeE8dXg3auxHAfdIhWmCezEB/exec';
-      var dest = target + (location.search || '') + (location.hash || '');
+      var params = new URLSearchParams(location.search || '');
+      if (!params.get('src')) params.set('src', 'short');
+      var dest = target + '?' + params.toString() + (location.hash || '');
       var meta = document.querySelector('meta[http-equiv="refresh"]');
       if (meta) meta.setAttribute('content', '3;url=' + dest);
       var ua = navigator.userAgent || '';
@@ -40,12 +42,14 @@
 </head>
 <body>
   <p style="font-family: system-ui, sans-serif; text-align: center; margin-top: 2.5rem; font-size: 1.05rem;">
-    <a id="fallback" href="https://script.google.com/macros/s/AKfycbxgs91gTdaI8mZ4I3mlhRdcq26wDL8yKDmWDmWlIktCCeE8dXg3auxHAfdIhWmCezEB/exec">กดที่นี่หากไม่ไปหน้าลงทะเบียนอัตโนมัติ</a>
+    <a id="fallback" href="https://script.google.com/macros/s/AKfycbxgs91gTdaI8mZ4I3mlhRdcq26wDL8yKDmWDmWlIktCCeE8dXg3auxHAfdIhWmCezEB/exec?src=short">กดที่นี่หากไม่ไปหน้าลงทะเบียนอัตโนมัติ</a>
   </p>
   <script>
     (function () {
       var target = 'https://script.google.com/macros/s/AKfycbxgs91gTdaI8mZ4I3mlhRdcq26wDL8yKDmWDmWlIktCCeE8dXg3auxHAfdIhWmCezEB/exec';
-      var dest = target + (location.search || '') + (location.hash || '');
+      var params = new URLSearchParams(location.search || '');
+      if (!params.get('src')) params.set('src', 'short');
+      var dest = target + '?' + params.toString() + (location.hash || '');
       var link = document.getElementById('fallback');
       if (link) link.setAttribute('href', dest);
     })();
